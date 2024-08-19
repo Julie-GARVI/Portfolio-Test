@@ -16,7 +16,7 @@ export const Navigation = ({}: Props) => {
     let animateBorder: string = "absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light transition-all duration-300 ease-in-out group-hover:w-full group-active:w-full"
 
     return (
-        <nav className="w-full fixed top-0 left-0 bg-white border-b-2 border-gray-300 z-999">
+        <nav className="w-full fixed top-0 left-0 bg-white border-b-2 border-gray-300 z-[100]">
             <Container className="flex items-center justify-center md:justify-between py-6 gap-10">
                 <div className="flex items-center gap-2.5">
                     <Logo />
@@ -30,9 +30,9 @@ export const Navigation = ({}: Props) => {
                             <span className={animateBorder} />
                         </li>
                         <li className="relative group hover:text-primary-light animate">
-                            <Link href="/contact">
+                            <ActiveLink href="/contact">
                                 Contact
-                            </Link>
+                            </ActiveLink>
                             <span className={animateBorder} />
                         </li>
                     </Typography>

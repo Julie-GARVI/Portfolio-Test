@@ -22,7 +22,7 @@ export const FormContactView = ({form}:Props) => {
                     src="/assets/svg/smartphone.svg"
                     alt="Illustration d'un smartphone img freepik"
                     width={350}
-                    height={600}
+                    height={350}
                     className="rounded"
                     />
      

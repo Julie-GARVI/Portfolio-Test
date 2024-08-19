@@ -54,7 +54,11 @@ export const ContactForm = ({form}: Props) => {
                     id="message"
                 />
 
-                <Button isLoading={isLoading} type="submit" className="px-8">
+                <Button 
+                isLoading={isLoading} 
+                type="submit" 
+                className="w-[150px]"
+                >
                     Envoyer
                 </Button>
             </form>

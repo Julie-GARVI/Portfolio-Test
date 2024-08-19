@@ -47,7 +47,7 @@ export const Textarea = ({
                 errors[id] 
                     ? "placeholder-primary-light text-gray-500" 
                     : "placeholder-gray-600",
-                "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-400"
+                "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-300"
             )}
             disabled={isLoading}
             {...register(id, {

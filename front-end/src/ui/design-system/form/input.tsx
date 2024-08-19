@@ -51,8 +51,8 @@ export const Input = ({
                         : "bg-white",
                         errors[id] 
                         ? "placeholder-primary-light" 
-                        : "placeholder-gray-600",
-                        "w-full p-4 font-light border border-gray-400 rounded focus:outline-none focus:ring-1 focus:ring-primary-300"
+                        : "placeholder-gray-500",
+                        "w-full p-3 font-light border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary-300"
                     )} 
                     disabled={isLoading}
                     {...register(id, {required: {

@@ -45,6 +45,9 @@ export const HeroTopView = () => {
                         <Button 
                             size="medium" 
                             variant="secondary" 
+                            baseUrl="../julie-garvi-developpeuse-web.pdf"
+                            download={true}
+                            className="mt-5"
                             icon={{icon: RiArrowRightLine}}
                             >
                                 <Typography 

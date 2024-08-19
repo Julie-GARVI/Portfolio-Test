@@ -35,7 +35,7 @@ export const ValuesView = () => {
     });
 
     return(
-        <section className="bg-blue">
+        <section className="bg-gradient-to-b from-gray-200 to-blue">
             <Container className="space-y-8">
                 <Typography weight="medium">Mes valeurs</Typography>
                 <div className="grid grid-cols-3 gap-10">

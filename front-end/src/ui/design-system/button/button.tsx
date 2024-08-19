@@ -14,6 +14,7 @@ interface Props {
     isLoading?: boolean;
     type?: "submit" | "button"
     baseUrl?: string,
+    download?: boolean,
     children?: React.ReactNode;
     className?: string,
     //linkType?: LinkTypes;
@@ -28,6 +29,7 @@ export const Button = ({
     disabled,
     isLoading,
     baseUrl,
+    download = false,
     type = "button",
     children,
     className,
@@ -109,12 +111,11 @@ export const Button = ({
 
     //Accède au lien externe
     if (baseUrl) {
-        return(
-            <a href={baseUrl} target="_blank">
+        return (
+            <a href={baseUrl} target="_blank" {...(download ? { download: true } : {})}>
                 {buttonElement}
             </a>
-
-        )
+        );
     }
 
     return buttonElement
