@@ -17,12 +17,12 @@ export const Navigation = ({}: Props) => {
 
     return (
         <nav className="w-full fixed top-0 left-0 bg-white border-b-2 border-gray-300 z-[100]">
-            <Container className="flex items-center justify-center md:justify-between py-6 gap-10">
+            <Container className="flex items-center justify-between py-6 gap-10">
                 <div className="flex items-center gap-2.5">
                     <Logo />
                 </div>
                 <div className="flex items-center gap-7">
-                    <Typography variant="caption" component="ul" className="relative flex flex-col md:flex-row items-center w-full gap-7">
+                    <Typography variant="caption" component="ul" className="relative flex flex-row items-center w-full gap-7">
                         <li className="relative group hover:text-primary-light animate">
                             <ActiveLink href="/">
                                 Accueil

@@ -21,7 +21,7 @@ export const HeroTopView = () => {
                     alt="Illustration de Julie"
                     width={400}
                     height={150}
-                    className="rounded"
+                    className="hidden md:block rounded"
                 />
                 <div className="flex flex-col justify-between">
                     <div className="max-w-3xl space-y-5 pr-5">
@@ -50,17 +50,17 @@ export const HeroTopView = () => {
                             className="mt-5"
                             icon={{icon: RiArrowRightLine}}
                             >
-                                <Typography 
-                                    variant="caption"
-                                    component="span" 
-                                    theme="primary-light"
-                                    className="mr-1.5 mb-1"
-                                    >
-                                    Voir mes services
-                                </Typography> 
+                            <Typography 
+                                variant="caption"
+                                component="span" 
+                                theme="primary-light"
+                                className="mr-1.5 mb-1"
+                                >
+                                Voir mes services
+                            </Typography> 
                         </Button>
                     </div>
-                    <SocialNetworksButtons />
+                    <SocialNetworksButtons className="mt-5" />
                 </div>
             </Container>
         </section>

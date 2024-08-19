@@ -23,7 +23,7 @@ export const FormContactView = ({form}:Props) => {
                     alt="Illustration d'un smartphone img freepik"
                     width={350}
                     height={350}
-                    className="rounded"
+                    className="hidden md:block rounded"
                     />
      
                     <Box>

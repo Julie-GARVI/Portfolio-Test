@@ -18,16 +18,14 @@ import { v4 as uuidv4 } from 'uuid';
 export const ProjectsView = () => {
 
     const projectList = projectsWebJulieList.map((project) => (
-        <div key={uuidv4()} className="relative group w-[350px] h-[400px] transition-transform duration-500 s">
-            <div className="relative w-full h-full">
-                <Image
-                    fill
-                    src={`/assets/images/${project.img}`}
-                    alt={`Illustration de ${project.title}`}
-                    className="object-cover rounded"
-                />
-            </div>
-
+        <div key={uuidv4()} className="relative mx-auto group w-full h-[400px] transition-transform duration-500 s">
+            <Image
+                fill
+                src={`/assets/images/${project.img}`}
+                alt={`Illustration de ${project.title}`}
+                className="object-cover rounded"
+            />
+           
             <div className="absolute left-0 bottom-0 w-full h-0 bg-gradient-to-t from-primary-light to-gray-linearGradient rounded overflow-hidden flex flex-col items-center justify-center transition-[height] duration-500 group-hover:h-full space-y-2">
                 <Typography 
                     variant="caption"
@@ -66,7 +64,7 @@ export const ProjectsView = () => {
         <article className="bg-white">
             <Container className="space-y-6">
                 <Typography weight="medium">Mes projets</Typography>
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {projectList}
                 </div>
             </Container>
