@@ -15,6 +15,8 @@ export const ContactForm = ({form}: Props) => {
 
     console.log("form", form)
 
+    console.log("errors", errors)
+
     return(
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mx-auto pt-8 pb-5 space-y-4">
                 <Input 
@@ -23,7 +25,8 @@ export const ContactForm = ({form}: Props) => {
                     placeholder="Votre nom"
                     register={register}
                     errors={errors}
-                    id="name"
+                    id="lastname"
+                    name="lastname"
                 />
 
                 <Input 
@@ -32,7 +35,8 @@ export const ContactForm = ({form}: Props) => {
                     placeholder="Votre prénom"
                     register={register}
                     errors={errors}
-                    id="firstanme"
+                    id="firstname"
+                    name="firstname"
                 />
 
                 <Input 
@@ -43,6 +47,7 @@ export const ContactForm = ({form}: Props) => {
                     register={register}
                     errors={errors}
                     id="email"
+                    name=""
                 />
 
                 <Textarea

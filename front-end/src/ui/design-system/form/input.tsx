@@ -10,9 +10,9 @@ interface Props {
     errorMsg?: string;
     id: string;
     required?: boolean;
-    // isAutocompleted?: boolean;
     label?: string;
 }
+
 export const Input = ({
     isLoading = false,
     placeholder,
@@ -22,56 +22,54 @@ export const Input = ({
     errorMsg = "Ce champ est obligatoire",
     id,
     required = true,
-    // isAutocompleted = false,
-    label
-}:Props) => {
+    label,
+}: Props) => {
 
-    console.log("isLoading", isLoading)
-
-    return(
+    return (
         <div className="space-y-2">
             {label && (
-                <Typography 
-                variant="caption"
-                component="div"
-                theme={errors[id] ? "primary-light" : "gray-600"}
+                <Typography
+                    variant="caption"
+                    component="div"
+                    theme={errors[id] ? "primary-light" : "gray-600"}
                 >
-                    {label} {" "} {required && <span className="text-primary-light">*</span>} 
+                    {label} {" "} {required && <span className="text-primary-light">*</span>}
                 </Typography>
             )}
 
             <div className="flex items-center">
-                <input 
-                    type={type} 
+                <input
+                    type={type}
                     placeholder={placeholder}
                     className={clsx(
                         "rounded",
-                        isLoading 
-                        ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed" 
-                        : "bg-white",
-                        errors[id] 
-                        ? "placeholder-primary-light" 
-                        : "placeholder-gray-500",
+                        isLoading
+                            ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed"
+                            : "bg-white",
+                        errors[id]
+                            ? "placeholder-primary-light text-primary-light"
+                            : "placeholder-gray-500",
                         "w-full p-3 font-light border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary-300"
-                    )} 
+                    )}
                     disabled={isLoading}
-                    {...register(id, {required: {
-                        value: required,
-                        message: errorMsg,
-                    }})}
-                    // autoComplete={isAutocompleted ? "on" : "off"}
-                /> 
+                    {...register(id, {
+                        required: {
+                            value: required,
+                            message: errorMsg,
+                        },
+                    })}
+                />
             </div>
 
             {errors[id] && (
-                <Typography 
-                variant="caption" 
-                component="div" 
-                theme="primary-light"
+                <Typography
+                    variant="caption"
+                    component="div"
+                    theme="primary-light"
                 >
-                    {errors[id] ?.message}
+                    {errors[id]?.message}
                 </Typography>
-            )}  
+            )}
         </div>
-    )
-}
+    );
+};

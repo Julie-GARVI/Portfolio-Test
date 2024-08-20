@@ -32,7 +32,7 @@ export const FormContactView = ({form}:Props) => {
                         component="h4"
                         className="text-center"
                         >
-                                Formulaire de contact :
+                                Formulaire de contact 
                         </Typography>
                         <ContactForm form={form} />
                     </Box>

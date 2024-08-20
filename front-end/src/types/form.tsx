@@ -8,7 +8,7 @@ export interface FormType {
 }
 
 export interface ContactFormFielsType {
-    name: string;
+    lastname: string;
     firstname: string;
     email: string;
     message: string;

@@ -1,54 +1,68 @@
 //HOOKS
-import {  SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useToggle } from "@/hooks/use-toggle";
 
 //TYPE
 import { ContactFormFielsType } from "@/types/form";
 
 //VUE
-import { ContactView } from "./contact.view"
+import { ContactView } from "./contact.view";
+
+//LIB
+import axios from 'axios';
 
 export const ContactContainer = () => {
     const { value: isLoading, setValue: setIsLoading } = useToggle({ initial: false });
 
-    // Temporary placeholder values and functions
-    const register = () => {};
-    const handleSubmit = (callback: SubmitHandler<ContactFormFielsType>) => (event: React.FormEvent) => {
-  
-        const formData: ContactFormFielsType = {
-            name: "test",
-            firstname: "test",
-            email: "test@test.com",
-            message: "test message",
-        };
-        callback(formData);
-    };
-    const errors = {};
-    const setError = () => {};
-    const reset = () => {};
+    const {
+        handleSubmit,
+        formState: { errors },
+        register,
+        reset,
+    } = useForm<ContactFormFielsType>({
+        mode: "onBlur", 
+        reValidateMode: "onChange", 
+    }); 
 
-    const handleSubmitContactForm = async ({
-        name,
-        firstname,
-        email,
-        message
-    }: ContactFormFielsType) => {
-        // Handle form submission logic here
+    const contactRequest = async (formData: ContactFormFielsType) => {
+        try {
+            const response = await axios.post('http://localhost:3000/sendEmail', {
+                lastname: formData.lastname,
+                firstname: formData.firstname,
+                email: formData.email, 
+                message: formData.message
+            });
+            console.log("Response:", response);
+            return { error: null };
+
+        } catch (error) {
+            console.error("Error:", error);
+            return { error };
+        }
     };
 
-    const onSubmit: SubmitHandler<ContactFormFielsType> = async (formData) => {
-        setIsLoading(false);
-        console.log("Form Data:", formData);
-        await handleSubmitContactForm(formData);
-    };
+    const onSubmit = async (formData: ContactFormFielsType) => {
+        setIsLoading(true);
+        
+        const { error } = await contactRequest(formData);
+        
+        if (error) {
+            setIsLoading(false); 
+            console.log(error)
+            return;
+        }
+
+        setIsLoading(false); 
+        reset();
+    }
 
     return (
         <ContactView
             form={{
-                register,
                 errors,
+                register,
+                handleSubmit,
                 onSubmit,
-                handleSubmit: handleSubmit(onSubmit),
                 isLoading,
             }}
         />
