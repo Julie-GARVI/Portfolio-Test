@@ -23,21 +23,21 @@ app.get('/', (req, res) => {
 });
 
 app.post('/sendEmail', async (req, res) => {
-    const { lastname, firstname, email, message } = req.body;
+    const { lastname, firstname, email, content } = req.body;
 
-    if (!lastname || !firstname || !email || !message) {
+    if (!lastname || !firstname || !email || !content) {
         return res.status(400).json({ message: 'Ce champ est obligatoire' });
     }
 
-    const regex = /[`^#$%^&*\{}|<>~]/;
-    if (regex.test(lastname) || regex.test(firstname) || regex.test(message)) {
-        return res.status(400).json({ message: 'Certains champs contiennent des caractères non autorisés.' });
+    const regex = /[`^#$^*\{}|<>~]/;
+    if (regex.test(lastname) || regex.test(firstname) || regex.test(email) || regex.test(content))  {
+        return res.status(400).json({ message: 'Les caractères particuliers ` ^ # $ ^ * \ { } | < > ~ ne sont pas acceptés ' });
     }
 
     const escapedLastname = validator.escape(lastname);
     const escapedFirstname = validator.escape(firstname);
     const escapedEmail = validator.escape(email);
-    const escapedMessage = validator.escape(message);
+    const escapedContent = validator.escape(content);
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -54,7 +54,7 @@ app.post('/sendEmail', async (req, res) => {
         text: `
             Nom: ${escapedFirstname} ${escapedLastname}
             Email: ${escapedEmail}
-            Message: ${escapedMessage}
+            Message: ${escapedContent}
         `
     };
 
@@ -62,6 +62,7 @@ app.post('/sendEmail', async (req, res) => {
         let info = await transporter.sendMail(mailOptions);
         console.log('Email envoyé:', info.response);
         return res.status(200).json({ message: 'Email envoyé avec succès' });
+        
     } catch (error) {
         console.error('Erreur lors de l\'envoi de l\'email:', error);
         return res.status(500).json({ message: 'Erreur lors de l\'envoi de l\'email' });

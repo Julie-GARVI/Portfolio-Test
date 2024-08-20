@@ -25,8 +25,8 @@ export const ContactForm = ({form}: Props) => {
                     placeholder="Votre nom"
                     register={register}
                     errors={errors}
+                    pattern={/^[^`^#$*\{}|<>~]*$/}
                     id="lastname"
-                    name="lastname"
                 />
 
                 <Input 
@@ -35,8 +35,8 @@ export const ContactForm = ({form}: Props) => {
                     placeholder="Votre prénom"
                     register={register}
                     errors={errors}
+                    pattern={/^[^`^#$*\{}|<>~]*$/}
                     id="firstname"
-                    name="firstname"
                 />
 
                 <Input 
@@ -46,8 +46,8 @@ export const ContactForm = ({form}: Props) => {
                     type="email"
                     register={register}
                     errors={errors}
+                    pattern={/^[^`^#$*\{}|<>~]*$/}
                     id="email"
-                    name=""
                 />
 
                 <Textarea
@@ -56,7 +56,8 @@ export const ContactForm = ({form}: Props) => {
                     placeholder="Votre message"
                     register={register}
                     errors={errors}
-                    id="message"
+                    pattern={/^[^`^#$*\{}|<>~]*$/}
+                    id="content"
                 />
 
                 <Button 

@@ -11,5 +11,5 @@ export interface ContactFormFielsType {
     lastname: string;
     firstname: string;
     email: string;
-    message: string;
+    content: string;
 }

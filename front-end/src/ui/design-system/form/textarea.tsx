@@ -7,11 +7,11 @@ interface Props {
     rows?: number;
     register: any;
     errors: any;
-    errorMsg?: string;
     id: string;
     required?: boolean;
     // isAutocompleted?: boolean;
     label?: string;
+    pattern?: RegExp;
 }
 export const Textarea = ({
     isLoading,
@@ -19,11 +19,11 @@ export const Textarea = ({
     rows = 5,
     register,
     errors,
-    errorMsg = "Ce champ est obligatoire",
     id,
     required = true, 
     // isAutocompleted = false,
     label,
+    pattern,
     }: Props) => {
     return(
         <div className="space-y-2">
@@ -52,9 +52,13 @@ export const Textarea = ({
             disabled={isLoading}
             {...register(id, {
                 required: {
-                    value: required, 
-                    message: errorMsg
-                }
+                    value: required,
+                    message: "Ce champ est obligatoire",
+                },
+                pattern: pattern && {
+                    value: pattern,
+                    message: "Les caractères particuliers ` ^ # $ ^ * \ { } | < > ~ ne sont pas acceptés",
+                },
             })}
             // autoComplete={isAutocompleted ? "on" : "off"}
 

@@ -30,7 +30,7 @@ export const ContactContainer = () => {
                 lastname: formData.lastname,
                 firstname: formData.firstname,
                 email: formData.email, 
-                message: formData.message
+                content: formData.content
             });
             console.log("Response:", response);
             return { error: null };
@@ -47,6 +47,7 @@ export const ContactContainer = () => {
         const { error } = await contactRequest(formData);
         
         if (error) {
+            console.log("error", error)
             setIsLoading(false); 
             console.log(error)
             return;

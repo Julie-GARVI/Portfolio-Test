@@ -7,10 +7,10 @@ interface Props {
     type?: "text" | "email";
     register: any;
     errors: any;
-    errorMsg?: string;
     id: string;
     required?: boolean;
     label?: string;
+    pattern?: RegExp;
 }
 
 export const Input = ({
@@ -19,12 +19,11 @@ export const Input = ({
     type = "text",
     register,
     errors,
-    errorMsg = "Ce champ est obligatoire",
     id,
     required = true,
     label,
+    pattern,
 }: Props) => {
-
     return (
         <div className="space-y-2">
             {label && (
@@ -33,7 +32,7 @@ export const Input = ({
                     component="div"
                     theme={errors[id] ? "primary-light" : "gray-600"}
                 >
-                    {label} {" "} {required && <span className="text-primary-light">*</span>}
+                    {label} {required && <span className="text-primary-light">*</span>}
                 </Typography>
             )}
 
@@ -55,7 +54,11 @@ export const Input = ({
                     {...register(id, {
                         required: {
                             value: required,
-                            message: errorMsg,
+                            message: "Ce champ est obligatoire",
+                        },
+                        pattern: pattern && {
+                            value: pattern,
+                            message: "Les caractères particuliers ` ^ # $ ^ * \ { } | < > ~ ne sont pas acceptés",
                         },
                     })}
                 />
