@@ -6,6 +6,7 @@ import { Seo } from '@/ui/components/seo/seo';
 
 //DESIGN SYSTEM
 import { Button } from '@/ui/design-system/button/button';
+import { CheckboxToggle } from '@/ui/design-system/button/checkbox';
 import { Logo } from '@/ui/design-system/logo/logo';
 import { Spinner } from '@/ui/design-system/spinner/spinner';
 import { Typography } from '@/ui/design-system/typographie/typography';
@@ -83,7 +84,14 @@ const designSystem = () => {
       </Typography>
 
       <Typography
-          variant="body"
+          variant="body-base"
+          component="p" 
+      >
+        Hello world
+      </Typography>
+
+      <Typography
+          variant="body-sm"
           component="p"
       >
         Hello world
@@ -100,6 +108,8 @@ const designSystem = () => {
       <Spinner variant="secondary" />
 
       <Logo />
+
+      <CheckboxToggle />
 
     </Container>
        
