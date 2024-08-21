@@ -46,7 +46,7 @@ export const Button = ({
             variantStyles = "bg-secondary-light hover:bg-secondary-300 text-primary-light rounded"
             break;
         case "outline": 
-            variantStyles = "bg-white hover:bg-gray-400/50 border border-gray-500 text-gray-600 rounded"
+            variantStyles = "bg-white hover:bg-gray-400/50 border border-gray-500 text-gray-700 rounded"
             break;
         case "disabled": 
             variantStyles = "bg-gray-400 border border-gray-500 text-gray-400 rounded cursor-not-allowed"
@@ -57,7 +57,7 @@ export const Button = ({
                 icoSize = 15;
             }
             if (iconTheme === "gray") {
-                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-600 w-[50px] h-[50px] rounded-full"
+                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-700 w-[50px] h-[50px] rounded-full"
                 icoSize = 20;
             }
     }
@@ -70,6 +70,12 @@ export const Button = ({
         case "medium": //Default
             sizeStyles = `${sizeStyles} font-medium px-[12px] py-[9px] ` 
             break;
+    }
+
+    const handleClick = () => {
+        if (action) {
+            action()
+        }
     }
 
     const buttonContent = (
@@ -102,6 +108,7 @@ export const Button = ({
             "relative animate",
             className
         )}
+        onClick={handleClick}
         disabled={disabled || isLoading}
     >
         {buttonContent}

@@ -26,7 +26,7 @@ export const ProjectsView = () => {
                 className="object-cover rounded"
             />
            
-            <div className="absolute left-0 bottom-0 w-full h-0 bg-gradient-to-t from-primary-light to-gray-linearGradient rounded overflow-hidden flex flex-col items-center justify-center transition-[height] duration-500 group-hover:h-full space-y-2">
+            <div className="absolute left-0 bottom-0 w-full h-0 bg-gradient-to-t from-primary-light to-gray-600 rounded overflow-hidden flex flex-col items-center justify-center transition-[height] duration-500 group-hover:h-full space-y-2">
                 <Typography 
                     variant="caption"
                     component="span"

@@ -26,9 +26,14 @@ module.exports = {
         300: "#e5e5e5",
         400: "#b2b2b2",
         500: "#757474",
-        600: "#393939",
-        linearGradient: "rgba(0,0,0,0.6)"
+        600: "rgba(0,0,0,0.6)",
+        700: "#393939",
       },
+      alert: {
+        danger: "#FF4E4E",
+        success: "#90DA1",
+        warning: "#FEB72F",
+      }
     },
 
     fontWeight: {

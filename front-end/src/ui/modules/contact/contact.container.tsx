@@ -19,10 +19,8 @@ export const ContactContainer = () => {
         formState: { errors },
         register,
         reset,
-    } = useForm<ContactFormFielsType>({
-        mode: "onBlur", 
-        reValidateMode: "onChange", 
-    }); 
+        clearErrors,
+    } = useForm<ContactFormFielsType>(); 
 
     const contactRequest = async (formData: ContactFormFielsType) => {
         try {
@@ -43,6 +41,8 @@ export const ContactContainer = () => {
 
     const onSubmit = async (formData: ContactFormFielsType) => {
         setIsLoading(true);
+
+        clearErrors();
         
         const { error } = await contactRequest(formData);
         

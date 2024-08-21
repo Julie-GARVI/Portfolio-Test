@@ -4,12 +4,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* Police */
 @layer base {
     html {
         font-family: "Oswald", system-ui, -apple-system, sans-serif;
     }
 }
 
+/* Animation */
 .animate, a, a:hover {
     transition: all 0.2s ease-in-out;
+}
+
+/* Reset */
+.autofill-reset:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #ffffff inset; 
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+.autofill-loading:-webkit-autofill {
+box-shadow: 0 0 0px 1000px #e5e5e5 inset;
+transition: background-color 5000s ease-in-out 0s; 
 }

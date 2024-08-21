@@ -19,10 +19,11 @@ interface Props {
         | "ul" 
     theme?: 
         "black" 
-        | "gray-600" 
+        | "gray-700" 
         | "white" 
         | "primary-light" 
         | "primary-dark" 
+        | "danger" 
 
     weight?: "regular" | "medium" | "semiBold";
     shadow?: "none" | "shadow"; 
@@ -70,8 +71,8 @@ export const Typography = ({
             case "black": // Default
                 colorStyles = "text-black";
                 break;
-            case "gray-600":
-                colorStyles = "text-gray-600";
+            case "gray-700":
+                colorStyles = "text-gray-700";
                 break;
             case "white":
                 colorStyles = "text-white";
@@ -81,6 +82,9 @@ export const Typography = ({
                 break;
             case "primary-dark":
                 colorStyles = "text-primary-dark";
+                break;
+            case "danger":
+                colorStyles="text-alert-danger";
                 break;
         }
 

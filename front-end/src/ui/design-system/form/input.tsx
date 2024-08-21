@@ -30,9 +30,12 @@ export const Input = ({
                 <Typography
                     variant="caption"
                     component="div"
-                    theme={errors[id] ? "primary-light" : "gray-600"}
+                    theme={errors[id] ? "danger" : "gray-700"}
                 >
-                    {label} {required && <span className="text-primary-light">*</span>}
+                    {label}{" "}
+                        {required && (
+                            <span className={errors[id] ? "text-danger" : "text-primary-light"}>*</span>
+                        )}
                 </Typography>
             )}
 
@@ -41,14 +44,14 @@ export const Input = ({
                     type={type}
                     placeholder={placeholder}
                     className={clsx(
-                        "rounded",
-                        isLoading
-                            ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed"
-                            : "bg-white",
-                        errors[id]
-                            ? "placeholder-primary-light text-primary-light"
-                            : "placeholder-gray-500",
-                        "w-full p-3 font-light border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary-300"
+                        isLoading 
+                            ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed autofill-loading" 
+                            : "bg-white autofill-reset" ,
+                        errors[id] 
+                            ? "placeholder-alert-danger text-gray-500" 
+                            : "placeholder-gray-600",
+                        "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-300"
+                        
                     )}
                     disabled={isLoading}
                     {...register(id, {
@@ -68,7 +71,7 @@ export const Input = ({
                 <Typography
                     variant="caption"
                     component="div"
-                    theme="primary-light"
+                    theme="danger"
                 >
                     {errors[id]?.message}
                 </Typography>

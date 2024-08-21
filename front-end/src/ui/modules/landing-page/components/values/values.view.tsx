@@ -20,7 +20,7 @@ export const ValuesView = () => {
                 <Typography 
                         variant="heading3"
                         component="h3"
-                        theme="gray-600"
+                        theme="gray-700"
                     >
                         {value.title}
                 </Typography>
