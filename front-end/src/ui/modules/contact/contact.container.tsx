@@ -10,6 +10,7 @@ import { ContactView } from "./contact.view";
 
 //LIB
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export const ContactContainer = () => {
     const { value: isLoading, setValue: setIsLoading } = useToggle({ initial: false });
@@ -53,6 +54,7 @@ export const ContactContainer = () => {
             return;
         }
 
+        toast.success("Message envoyé")
         setIsLoading(false); 
         reset();
     }
