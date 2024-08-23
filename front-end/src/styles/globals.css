@@ -16,28 +16,15 @@
     transition: all 0.2s ease-in-out;
 }
 
-/* Reset */
+/* Reset pour le mode clair */
 .autofill-reset:-webkit-autofill {
-    box-shadow: 0 0 0px 1000px #ffffff inset; 
-    transition: background-color 5000s ease-in-out 0s;
-  }
-  
-.autofill-loading:-webkit-autofill {
-box-shadow: 0 0 0px 1000px #e5e5e5 inset;
-transition: background-color 5000s ease-in-out 0s; 
+  box-shadow: 0 0 0px 1000px #ffffff inset; 
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Styles pour le mode sombre */
-[data-theme='dark'] body {
-    background-color: #1a1a1a; /* couleur de fond sombre */
-    color: #ffffff; /* couleur de texte sombre */
-  }
-  
-  /* Autres styles en fonction de l'attribut data-theme */
-  [data-theme='dark'] .bg-primary-dark {
-    background-color: #333333; /* couleur de fond pour le mode sombre */
-  }
-  [data-theme='dark'] .text-primary-light {
-    color: #f66b80; /* couleur de texte pour le mode sombre */
-  }
-  
+/* Loading pour le mode clair */
+.autofill-loading:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #e5e5e5 inset;
+  transition: background-color 5000s ease-in-out 0s; 
+}
+

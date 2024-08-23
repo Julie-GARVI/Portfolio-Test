@@ -34,37 +34,36 @@ export const Input = ({
                 >
                     {label}{" "}
                         {required && (
-                            <span className={errors[id] ? "text-danger" : "text-primary-light"}>*</span>
+                            <span className={errors[id] ? "text-danger" : "text-primary-light dark:text-primary-dark"}>*</span>
                         )}
                 </Typography>
             )}
 
             <div className="flex items-center">
-                <input
-                    type={type}
-                    placeholder={placeholder}
-                    className={clsx(
-                        isLoading 
-                            ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed autofill-loading" 
-                            : "bg-white autofill-reset" ,
-                        errors[id] 
-                            ? "placeholder-alert-danger text-gray-500" 
-                            : "placeholder-gray-600",
-                        "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-300"
-                        
-                    )}
-                    disabled={isLoading}
-                    {...register(id, {
-                        required: {
-                            value: required,
-                            message: "Ce champ est obligatoire",
-                        },
-                        pattern: pattern && {
-                            value: pattern,
-                            message: "Les caractères particuliers ` ^ # $ ^ * \ { } | < > ~ ne sont pas acceptés",
-                        },
-                    })}
-                />
+            <input
+            type={type}
+            placeholder={placeholder}
+            className={clsx(
+                isLoading 
+                ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed autofill-loading" 
+                : "bg-white autofill-reset dark:bg-gray-700 dark:text-white",
+                errors[id] 
+                ? "placeholder-alert-danger text-gray-500 dark:text-white" 
+                : "placeholder-gray-600 dark:placeholder-white dark:text-white",
+                "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-light border-gray-300 dark:focus:ring-primary-dark"
+            )}
+            disabled={isLoading}
+            {...register(id, {
+                required: {
+                value: required,
+                message: "Ce champ est obligatoire",
+                },
+                pattern: pattern && {
+                value: pattern,
+                message: "Les caractères particuliers ` ^ # $ ^ * \\ { } | < > ~ ne sont pas acceptés",
+                },
+            })}
+            />
             </div>
 
             {errors[id] && (

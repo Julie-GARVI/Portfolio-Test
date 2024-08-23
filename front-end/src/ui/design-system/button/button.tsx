@@ -5,6 +5,9 @@ import clsx from "clsx";
 //TYPE
 import { IconProps } from "@/types/iconProps";
 
+//CONTEXT
+import { useTheme } from "@/context/darkModeContext";
+
 interface Props {
     size?: "small" | "medium"
     variant?: "accent" | "secondary" | "outline" | "disabled" | "ico";
@@ -36,14 +39,16 @@ export const Button = ({
     action = () => {},
 }: Props) => {
 
+    const { theme } = useTheme();
+
     let variantStyles: string = "flex items-center justify-content", sizeStyles: string = "text-caption flex flex-row items-center justify-center", icoSize: number = 0
 
     switch (variant) {
         case "accent": //Default
-            variantStyles = "bg-primary-light hover:bg-primary-300 text-white rounded"
+            variantStyles = "bg-primary-light hover:bg-primary-300 text-white rounded dark:bg-primary-dark"
             break;
         case "secondary": 
-            variantStyles = "bg-secondary-light hover:bg-secondary-300 text-primary-light rounded"
+            variantStyles = "bg-secondary-light hover:bg-secondary-300 text-primary-light rounded dark:bg-secondary-dark dark:hover:bg-secondary-600"
             break;
         case "outline": 
             variantStyles = "bg-white hover:bg-gray-400/50 border border-gray-500 text-gray-700 rounded"
@@ -53,11 +58,11 @@ export const Button = ({
             break;
         case "ico": 
             if (iconTheme === "secondary") {//Default
-                variantStyles = "bg-secondary-light  hover:bg-secondary-30 w-[50px] h-[50px]  text-primary-light rounded-full "
+                variantStyles = "bg-secondary-light  hover:bg-secondary-30 w-[50px] h-[50px]  text-primary-light rounded-full"
                 icoSize = 15;
             }
             if (iconTheme === "gray") {
-                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-700 w-[50px] h-[50px] rounded-full"
+                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-700 w-[50px] h-[50px] rounded-full dark:bg-gray-700"
                 icoSize = 20;
             }
     }
@@ -93,7 +98,7 @@ export const Button = ({
             {children}
 
             {icon &&  (
-                <icon.icon size={icoSize} />
+                <icon.icon size={icoSize} color={theme ? "black" : "white"}  />
             )}
         </>
     )

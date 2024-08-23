@@ -13,7 +13,7 @@ export const CheckboxToggle = ({
     const { theme, toggleTheme } = useTheme(); 
   
     return (
-      <label htmlFor="check" className={clsx("relative inline-block w-14 h-8 cursor-pointer", className)}>
+      <label htmlFor="check" className={clsx("relative inline-block w-12 h-6 cursor-pointer", className)}>
         <input 
           type="checkbox"
           className="opacity-0 w-0 h-0 peer" 
@@ -23,13 +23,13 @@ export const CheckboxToggle = ({
         />
         <span
           className={clsx(
-            "absolute inset-0 rounded-full border transition-colors duration-500 ease-in-out",
+            "absolute inset-0 rounded-full border transition-colors duration-500 ease-in-out hover:bg-primary-light dark:hover:bg-primary-dark",
             theme ? "bg-gray-700 border-gray-500" : "bg-gray-300 border-gray-200"
           )}
         ></span>
         <span
           className={clsx(
-            "absolute top-1/2 left-1 w-6 h-6 rounded-full bg-white transform -translate-y-1/2 transition-all duration-200 ease-in-out",
+            "absolute top-1/2 left-1 w-4 h-4 rounded-full bg-white transform -translate-y-1/2 transition-all duration-200 ease-in-out",
             theme ? "translate-x-6 bg-gray-700" : "bg-white"
           )}
         ></span>

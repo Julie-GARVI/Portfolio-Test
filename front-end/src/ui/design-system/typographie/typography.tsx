@@ -21,8 +21,7 @@ interface Props {
         "black" 
         | "gray-700" 
         | "white" 
-        | "primary-light" 
-        | "primary-dark" 
+        | "primary" 
         | "danger" 
 
     weight?: "regular" | "medium" | "semiBold";
@@ -67,27 +66,26 @@ export const Typography = ({
             break;
         }
 
-        switch(theme) {
-            case "black": // Default
-                colorStyles = "text-black";
-                break;
-            case "gray-700":
-                colorStyles = "text-gray-700";
-                break;
-            case "white":
-                colorStyles = "text-white";
-                break;
-            case "primary-light":
-                colorStyles = "text-primary-light";
-                break;
-            case "primary-dark":
-                colorStyles = "text-primary-dark";
-                break;
-            case "danger":
-                colorStyles="text-alert-danger";
-                break;
-        }
-
+    switch(theme) {
+        case "black": // Default
+            colorStyles = "text-black dark:text-white";
+            break;
+        case "gray-700":
+            colorStyles = "text-gray-700 dark:text-gray-300";
+            break;
+        case "white":
+            colorStyles = "text-white";
+            break;
+        case "primary":
+            colorStyles = "text-primary-light dark:text-primary-dark";
+            break;
+        case "danger":
+            colorStyles="text-alert-danger";
+            break;
+        default:
+            colorStyles = "text-black dark:text-white"; 
+    }
+        
     switch(weight) {
         case "semiBold":
             weightStyles = "font-semiBold";

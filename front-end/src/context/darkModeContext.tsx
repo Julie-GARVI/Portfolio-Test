@@ -1,6 +1,8 @@
 import { ThemeContextType } from "@/types/theme";
 
-import {ReactNode, createContext, useCallback, useContext, useState,} from "react";
+import { useToggle } from "@/hooks/use-toggle";
+
+import {ReactNode, createContext, useCallback, useContext} from "react";
   
   interface Props {
     children: ReactNode;
@@ -12,17 +14,19 @@ import {ReactNode, createContext, useCallback, useContext, useState,} from "reac
   });
   
   const ThemeContextProvider = ({ children }: Props) => {
-    
-    const [theme, setTheme] = useState(false);
+
+    const { value: theme, setValue: setTheme } = useToggle({ initial: false });
   
     const toggleTheme = useCallback(() => {
       setTheme((prev) => !prev);
       document.body.classList.toggle("dark");
     }, [theme]);
+
     const value = {
       theme,
       toggleTheme,
     };
+
     return (
       <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
     );

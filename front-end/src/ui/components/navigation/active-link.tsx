@@ -26,7 +26,7 @@ export const ActiveLink = ({ href, children }: Props) => {
             {children}
             <span
                 className={clsx(
-                    "absolute bottom-0 left-0 block h-[3px] bg-primary-light animate",
+                    "absolute bottom-0 left-0 block h-[3px] bg-primary-light dark:bg-primary-dark animate",
                     isActive ? "w-full" : "w-0" 
                 )}
             />

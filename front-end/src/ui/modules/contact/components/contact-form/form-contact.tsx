@@ -16,7 +16,7 @@ interface Props {
 export const FormContactView = ({form}:Props) => {
 
     return(
-        <section className="bg-white">
+        <section className="bg-white dark:bg-black">
             <Container className="flex flex-row gap-5 items-end justify-center">
                 <Image
                     src="/assets/svg/smartphone.svg"

@@ -4,38 +4,44 @@ module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class', // Utilisation de la classe pour le mode sombre
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
         primary: {
           light: "#f66b80",
-          300: "rgba(246, 107, 128, 0.8)",
+          300: "#f66b80cc",
           dark: "#ff0051",
-          600: "rgba(234, 36, 69, 1)",
+          600: "#ea2445",
         },
         secondary: {
           light: "#ffe4e8",
-          300: "rgba(252, 212, 218, 0.29)",
-          dark: "#e1c5c9",
-          600: "rgba(225, 197, 201, 0.6)",
+          300: "#fcd4da4a",
+          dark: "#2b2626",
+          600: "#4b4141",
         },
-        blue: "#b3cfd7",
+        blue: {
+          light: "#b3cfd7",
+          dark: "#00506b"
+        },
         gray: {
           100: "#fafafa",
           200: "#f2f2f2",
           300: "#e5e5e5",
           400: "#b2b2b2",
           500: "#757474",
-          600: "rgba(0,0,0,0.6)",
+          600: "#00000099",
           700: "#393939",
+          800: "#1e1e1e",
         },
         alert: {
           danger: "#FF4E4E",
           success: "#90DA1",
           warning: "#FEB72F",
         },
-        darkMode: '#393939',
+
+        ringColor: ['focus', 'dark'],
+  
       },
       fontWeight: {
         semiBold: '600',

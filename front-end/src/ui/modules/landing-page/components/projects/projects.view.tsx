@@ -3,6 +3,9 @@ import { projectsWebJulieList } from "@/data/projects";
 
 import { Container } from "@/ui/components/container/container";
 
+//CONTEXT
+import { useTheme } from "@/context/darkModeContext";
+
 //IMG & iCONS
 import Image from "next/image";
 import { IconType } from "react-icons";
@@ -17,16 +20,21 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const ProjectsView = () => {
 
+    const { theme } = useTheme();
+
     const projectList = projectsWebJulieList.map((project) => (
         <div key={uuidv4()} className="relative mx-auto group w-full h-[400px] transition-transform duration-500 s">
-            <Image
-                fill
-                src={`/assets/images/${project.img}`}
-                alt={`Illustration de ${project.title}`}
-                className="object-cover rounded"
-            />
+
+        {theme && <div className="absolute inset-0 bg-black opacity-20 z-10"></div>}
+
+        <Image
+            fill
+            src={`/assets/images/${project.img}`}
+            alt={`Illustration de ${project.title}`}
+            className="relative object-cover rounded"
+        />
            
-            <div className="absolute left-0 bottom-0 w-full h-0 bg-gradient-to-t from-primary-light to-gray-600 rounded overflow-hidden flex flex-col items-center justify-center transition-[height] duration-500 group-hover:h-full space-y-2">
+            <div className="absolute left-0 bottom-0 w-full h-0 bg-gradient-to-t from-primary-light dark:from-primary-dark to-gray-600 rounded dark:to-gray-600 overflow-hidden flex flex-col items-center justify-center transition-[height] duration-500 group-hover:h-full space-y-2">
                 <Typography 
                     variant="caption"
                     component="span"
@@ -61,7 +69,7 @@ export const ProjectsView = () => {
     ));
 
     return (
-        <article className="bg-white">
+        <article className="bg-white dark:bg-black">
             <Container className="space-y-6">
                 <Typography weight="medium">Mes projets</Typography>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

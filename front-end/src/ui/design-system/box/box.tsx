@@ -15,7 +15,7 @@ export const Box: React.FC<Props> = ({
 }: Props) => {
     return (
         <div className={clsx(
-            "w-full mx-auto md:w-[700px] md:mr-8 border border-gray-300 bg-gray-100 rounded",  
+            "w-full mx-auto md:w-[700px] md:mr-8 border border-gray-300 bg-gray-100 rounded dark:bg-gray-800 dark:border-gray-700",  
             padding_x, 
             padding_y, 
             className

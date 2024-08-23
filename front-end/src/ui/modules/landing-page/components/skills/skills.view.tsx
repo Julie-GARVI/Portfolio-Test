@@ -11,7 +11,7 @@ import { Typography } from "@/ui/design-system/typographie/typography"
 export const SkillsView = () => {
 
     const technologiesList = skillsTechnolgiesList.map((skill) => (
-        <div  key={uuidv4()} className="bg-white flex flex-col items-center justify-center rounded shadow p-4">
+        <div  key={uuidv4()} className="bg-white dark:bg-gray-700 flex flex-col items-center justify-center rounded shadow p-4">
             <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden">
                 <Image 
                     fill
@@ -30,7 +30,7 @@ export const SkillsView = () => {
                 <Typography 
                     variant="caption"
                     component="span"
-                    theme="gray-600"
+                    theme="gray-700"
                     weight="medium"
                     >{skill.technology}
                 </Typography>
@@ -46,10 +46,10 @@ export const SkillsView = () => {
     
 
     return(
-        <section className="bg-gray-200">
+        <section className="bg-gray-200 dark:bg-gray-800">
             <Container className="space-y-8">
                 <Typography weight="medium">Mes compétences</Typography>
-                <div className="bg-gray-200 grid grid-cols-2 lg:grid-cols-5 gap-10 p-6 ">
+                <div className="bg-gray-200 dark:bg-gray-800 grid grid-cols-2 lg:grid-cols-5 gap-10 p-6 ">
                     {technologiesList}
                 </div>
             </Container>

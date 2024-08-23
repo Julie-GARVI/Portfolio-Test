@@ -43,12 +43,12 @@ export const Textarea = ({
             placeholder={placeholder}
             className={clsx(
                 isLoading 
-                    ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed autofill-loading" 
-                    : "bg-white autofill-reset" ,
+                    ? "bg-gray-300 focus:ring-gray-300 cursor-not-allowed autofill-loading dark:text-white" 
+                    : "bg-white autofill-reset dark:bg-gray-700 dark:text-white",
                 errors[id] 
-                    ? "placeholder-primary-light text-gray-500" 
-                    : "placeholder-gray-600",
-                "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-300"
+                    ? "placeholder-alert-danger text-gray-500" 
+                    : "placeholder-gray-600 dark:placeholder-white",
+                "w-full p-4 font-light border rounded focus:outline-none focus:ring-1 focus:ring-primary-300 border-gray-300 dark:focus:ring-primary-dark"
                 
             )}
             disabled={isLoading}

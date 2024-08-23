@@ -14,7 +14,7 @@ import { Button } from "@/ui/design-system/button/button"
 export const HeroTopView = () => {
 
     return(
-        <section className="bg-white ">
+        <section className="bg-white dark:bg-black">
             <Container className="flex flex-col md:flex-row justify-between gap-5">
                 <Image
                     src="/assets/images/julie-hero.jpg"
@@ -29,7 +29,7 @@ export const HeroTopView = () => {
                         <Typography 
                             variant="heading3" 
                             component="h3" 
-                            theme="primary-light">
+                            theme="primary">
                             <strong>
                                 Création de sites internet, boutiques en ligne, portfolios
                             </strong>
@@ -53,7 +53,7 @@ export const HeroTopView = () => {
                             <Typography 
                                 variant="caption"
                                 component="span" 
-                                theme="primary-light"
+                                theme="primary"
                                 className="mr-1.5 mb-1"
                                 >
                                 Voir mes services
