@@ -22,7 +22,7 @@ export const ValuesView = () => {
         return (
             <div key={uuidv4()} className="flex flex-col justify-center items-center space-y-2">
                 <div className="">
-                    <IconComponent size={30} color={theme ? "black" : "#e5e5e5"} />
+                    <IconComponent size={30} color={!theme ? "black" : "#e5e5e5"} />
                 </div>
                 <Typography 
                         variant="heading3"

@@ -5,8 +5,8 @@ import { Typography } from "@/ui/design-system/typographie/typography";
 
 export const BackgroundView = () => {
     return (
-        <section className="sticky top-0 left-0 -z-10 h-[300px] flex flex-col items-center justify-center mt-20 bg-[url('/assets/images/contact-background.jpg')]">
-            <div className="absolute inset-0 bg-gray-400 opacity-50 -z-10 dark:bg-black"></div>
+        <section className="sticky top-0 left-0 -z-10 h-[300px] flex flex-col items-center justify-center mt-20 bg-[url('/assets/images/contact-background.jpg')] dark:bg-[url('/assets/images/world-background.jpg')]">
+            <div className="absolute inset-0 bg-gray-400 opacity-50 -z-10 dark:bg-gray-800"></div>
             <Container className="space-y-6">
                 <Typography
                     variant="heading2"

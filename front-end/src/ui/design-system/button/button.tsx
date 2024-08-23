@@ -62,7 +62,7 @@ export const Button = ({
                 icoSize = 15;
             }
             if (iconTheme === "gray") {
-                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-700 w-[50px] h-[50px] rounded-full dark:bg-gray-700"
+                variantStyles = "bg-gray-300 hover:bg-gray-200 text-gray-700 w-[50px] h-[50px] rounded-full dark:bg-gray-700 dark:hover:bg-gray-500"
                 icoSize = 20;
             }
     }

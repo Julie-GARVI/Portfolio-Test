@@ -2,8 +2,14 @@
 import { Container } from "../container/container"
 
 //LINK
-import Link from "next/link"
 import { ActiveLink } from "./active-link"
+
+//Icons
+import { MdOutlineWbSunny } from "react-icons/md";
+import { FiMoon } from "react-icons/fi";
+
+//CONTEXT
+import { useTheme } from "@/context/darkModeContext"
 
 //DESIGN SYSTEM
 import { Logo } from "@/ui/design-system/logo/logo"
@@ -13,6 +19,8 @@ import { CheckboxToggle } from "@/ui/design-system/button/checkbox"
 interface Props{}
 
 export const Navigation = ({}: Props) => {
+
+    const { theme } = useTheme();
 
     const animateBorderStyle = "absolute left-0 bottom-0 w-0 h-[2px] bg-primary-light dark:bg-primary-dark transition-all duration-300 ease-in-out group-hover:w-full group-active:w-full";
     const listStyle = "relative group hover:text-primary-light dark:hover:text-primary-dark dark:text-white animate"
@@ -37,7 +45,10 @@ export const Navigation = ({}: Props) => {
                 </ActiveLink>
                 <span className={animateBorderStyle} />
               </li>
+              <div className="flex flex-row items-center gap-2">
               <CheckboxToggle />
+              {theme ? <MdOutlineWbSunny size={20} /> : <FiMoon size={20} /> }
+              </div>
             </Typography>
           </div>
         </Container>

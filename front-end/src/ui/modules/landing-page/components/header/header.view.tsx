@@ -23,27 +23,27 @@ export const HeaderView = () => {
                     </Typography>
 
                     <Typography 
-                    variant="heading1"
-                    component="h1"
+                    variant="heading2"
+                    component="div"
                     shadow="shadow"
                     theme="primary"
+
                     >
-                        <TypeAnimation
-                        sequence={[
-                            'Freelance',
-                            1000, 
-                            'Font-end',
-                            1000,
-                            'Back-end',
-                            1000,
-                        ]}
-                        wrapper="h1"
-                        speed={35}
-                        style={{ fontSize: '60px', fontWeight: "600", textShadow:'1px 1px 2px rgba(0, 0, 0, 0.3)'}}
-                        repeat={Infinity}
-                        />
-                    </Typography>
-        
+                    <TypeAnimation
+                    sequence={[
+                        'Freelance',
+                        1000, 
+                        'Font-end',
+                        1000,
+                        'Back-end',
+                        1000,
+                    ]}
+                    wrapper="h1"
+                    speed={35}
+                    style={{ fontSize: '60px', fontWeight: "600", textShadow:'1px 1px 2px rgba(0, 0, 0, 0.3)'}}
+                    repeat={Infinity}
+                    />
+                    </Typography>        
                     
                 </Container>
             </ header>

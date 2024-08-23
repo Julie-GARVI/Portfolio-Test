@@ -10,19 +10,35 @@ import { SocialNetworksButtons } from "@/ui/components/navigation/social-network
 import { Typography } from "@/ui/design-system/typographie/typography"
 import { Button } from "@/ui/design-system/button/button"
 
+//Context
+import { useTheme } from "@/context/darkModeContext";
 
 export const HeroTopView = () => {
+
+    const { theme } = useTheme();
 
     return(
         <section className="bg-white dark:bg-black">
             <Container className="flex flex-col md:flex-row justify-between gap-5">
-                <Image
-                    src="/assets/images/julie-hero.jpg"
-                    alt="Illustration de Julie"
-                    width={400}
-                    height={150}
-                    className="hidden md:block rounded"
-                />
+                {!theme
+
+                ? <Image
+                src="/assets/images/julie-hero.jpg"
+                alt="Illustration de Julie"
+                width={400}
+                height={150}
+                className="hidden md:block rounded"
+            />
+                :  <Image
+                src="/assets/images/julie-hero-dark.jpg"
+                alt="Illustration de Julie"
+                width={400}
+                height={150}
+                className="hidden md:block rounded"
+            />
+            
+             }
+    
                 <div className="flex flex-col justify-between">
                     <div className="max-w-3xl space-y-5 pr-5">
                         <Typography weight="medium">Mes services</Typography>
