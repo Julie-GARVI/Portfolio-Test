@@ -58,7 +58,7 @@ export const Button = ({
             break;
         case "ico": 
             if (iconTheme === "secondary") {//Default
-                variantStyles = "bg-secondary-light  hover:bg-secondary-30 w-[50px] h-[50px]  text-primary-light rounded-full"
+                variantStyles = "bg-secondary-light  hover:bg-secondary-30 w-[50px] h-[50px]  text-primary-light rounded-full dark:bg-gray-400 dark:hover:bg-gray-500"
                 icoSize = 15;
             }
             if (iconTheme === "gray") {
@@ -98,7 +98,7 @@ export const Button = ({
             {children}
 
             {icon &&  (
-                <icon.icon size={icoSize} color={theme ? "black" : "white"}  />
+                <icon.icon size={icoSize} color={!theme ? "#393939" : "white"}  />
             )}
         </>
     )

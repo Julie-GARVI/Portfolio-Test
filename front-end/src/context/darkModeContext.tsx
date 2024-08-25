@@ -18,9 +18,12 @@ import {ReactNode, createContext, useCallback, useContext} from "react";
     const { value: theme, setValue: setTheme } = useToggle({ initial: false });
   
     const toggleTheme = useCallback(() => {
-      setTheme((prev) => !prev);
-      document.body.classList.toggle("dark");
+      const saveTheme = !theme;
+      setTheme(saveTheme);
+      document.body.classList.toggle("dark", saveTheme);
+      localStorage.setItem("theme", saveTheme ? "dark" : "light");
     }, [theme]);
+  
 
     const value = {
       theme,

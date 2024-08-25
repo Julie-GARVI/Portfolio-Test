@@ -3,6 +3,7 @@ import { IconType } from "react-icons";
 export interface skillList {
     logo: string;
     technology: string;
+    description: string;
 }
 
 export interface projectsList {

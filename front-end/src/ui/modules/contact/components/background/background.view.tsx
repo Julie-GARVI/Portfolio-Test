@@ -19,7 +19,7 @@ export const BackgroundView = () => {
                     variant="body-base" 
                     component="p"
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.
+                    Je suis disponible pour discuter de vos projets ou répondre à vos questions. <br /> N&apos;hésitez pas à me contacter via le formulaire ci-dessous ou par email pour toute demande ou collaboration.
                 </Typography>
             </Container>
         </section>

@@ -33,7 +33,7 @@ export const Textarea = ({
             >
               {label}{" "}
                 {required && (
-                    <span className={errors[id] ? "text-danger" : "text-primary-light"}>*</span>
+                     <span className={errors[id] ? "text-danger" : "text-primary-light dark:text-primary-dark"}>*</span>
                 )}
             </Typography>
         )}

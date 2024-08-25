@@ -47,16 +47,14 @@ export const HeroTopView = () => {
                             component="h3" 
                             theme="primary">
                             <strong>
-                                Création de sites internet, boutiques en ligne, portfolios
+                            Développeuse Web Freelance - Création de sites sur Mesure
                             </strong>
                         </Typography>
                         <Typography 
                             variant="body-base" 
                             component="p" 
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.
-                                
+                            Je suis Julie Garvi, une développeuse web freelance passionnée par la création de sites internet. Mon objectif est d&apos;aider les entreprises et les entrepreneurs à se démarquer en ligne grâce à des solutions web modernes, fonctionnelles et esthétiques. <br />Je crée sur mesure tous types de sites internet tels que des sites vitrines, des portfolios et des boutiques en ligne. Autodidacte et passionnée, je vous accompagne sur toutes les étapes de votre projet web, de la conception (analyses besoins, maquettage...), au développement et jusqu&apos;à la mise en production du site.                                
                         </Typography>
                         <Button 
                             size="medium" 

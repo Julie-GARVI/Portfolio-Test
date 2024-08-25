@@ -17,14 +17,14 @@ export const projectsWebJulieList: projectsList[] = [
         img: "evasion-trip.png",
         title: "Evasion-Trip",
         icons: [FaReact, FaSass, FaNodeJs], 
-        description: "Paca-destinations présente des idées de destinations dans la région Provence-Alpes-Côte d'Azur. Les utilisateurs peuvent créer un compte et accéder à leur profil.",
+        description: "Evasion-trip est une agence de voyage fictive qui propose des voyages dans le monde entier.",
         baseUrl: "https://evasion-trip.com/"
     },
     {
         img: "fitcode-fitness.png",
         title: "Fitcode-Fitness",
         icons: [RiSvelteFill, FaSass, FaLaravel],  
-        description: "Paca-destinations présente des idées de destinations dans la région Provence-Alpes-Côte d'Azur. Les utilisateurs peuvent créer un compte et accéder à leur profil.",
+        description: "Fitcode Fitness est une salle de sport proposant des programmes sportifs. L'application est accessible uniquement aux membres qui ont créé un compte.",
         baseUrl: "https://fitcode-fitness.com/"
     },
 ];

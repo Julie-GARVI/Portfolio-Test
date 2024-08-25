@@ -6,7 +6,7 @@ import { ActiveLink } from "./active-link"
 
 //Icons
 import { MdOutlineWbSunny } from "react-icons/md";
-import { FiMoon } from "react-icons/fi";
+import { PiMoonLight } from "react-icons/pi";
 
 //CONTEXT
 import { useTheme } from "@/context/darkModeContext"
@@ -47,7 +47,7 @@ export const Navigation = ({}: Props) => {
               </li>
               <div className="flex flex-row items-center gap-2">
               <CheckboxToggle />
-              {theme ? <MdOutlineWbSunny size={20} /> : <FiMoon size={20} /> }
+              {theme ? <MdOutlineWbSunny size={20} /> : <PiMoonLight size={20} /> }
               </div>
             </Typography>
           </div>

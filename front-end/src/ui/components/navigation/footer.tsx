@@ -32,7 +32,7 @@ export const Footer = () => {
                     Contact
                     </Typography>
                     <div className={contactBlockStyle}>
-                        <HiOutlineMail color={theme ? "black" : "#e5e5e5"} />
+                        <HiOutlineMail color={!theme ? "black" : "#e5e5e5"} />
                         <Typography
                         variant="body-sm"
                         component="span"
@@ -41,7 +41,7 @@ export const Footer = () => {
                         </Typography>
                     </div>
                     <div className={contactBlockStyle}>
-                        <HiPhone color={theme ? "black" : "#e5e5e5"} />
+                        <HiPhone color={!theme ? "black" : "#e5e5e5"} />
                         <Typography
                         variant="body-sm"
                         component="span"

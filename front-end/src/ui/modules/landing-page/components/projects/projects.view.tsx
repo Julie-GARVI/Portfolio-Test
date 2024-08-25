@@ -63,6 +63,7 @@ export const ProjectsView = () => {
                     variant="ico"
                     icon={{icon: FaExternalLinkAlt}}
                     baseUrl={project.baseUrl}
+                    className="z-20"
                 />
             </div>
         </div>
