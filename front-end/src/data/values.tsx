@@ -9,16 +9,16 @@ export const valuesJulieList: valuesList[] = [
     {
         title: "Authenticité",
         icon: FaHandHoldingHeart,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.",
+        description: "Je privilégie la qualité dans mon travail et prends le temps d'échanger sur les attentes de votre projet pour répondre au mieux à vos attentes."
     },
     {
         title: "Créativité",
         icon: FaRegLightbulb, 
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.",
+        description: "J'utilise des technologies modernes pour créer des interfaces qui reflètent l'image de votre marque. Toujours à la recherche de nouvelles idée, je saurais m'adapter à vos besoins."
     },
     {
         title: "Passion",
-        icon: BsSearchHeart,  
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis ante vitae eros fermentum, nec facilisis justo dapibus. Sed vestibulum, libero ut vehicula maximus, turpis felis ultrices risus, nec vulputate nulla risus a sapien. Mauris et urna a tortor bibendum vestibulum. Fusce ut turpis vitae lectus elementum hendrerit. Integer dictum turpis ac eros elementum, eu feugiat risus dapibus. Proin varius metus sit amet est elementum, vel fringilla nisi auctor.",
-    },
+        icon: BsSearchHeart,
+        description: "Autodidacte et passionnée par la création numérique, je serais ravie de vous accompagner à chaque étape de votre projet et de vous apporter des solutions digitales."
+    }
 ];
