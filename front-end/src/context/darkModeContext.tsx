@@ -2,7 +2,7 @@ import { ThemeContextType } from "@/types/theme";
 
 import { useToggle } from "@/hooks/use-toggle";
 
-import {ReactNode, createContext, useCallback, useContext} from "react";
+import {ReactNode, createContext, useCallback, useContext, useEffect} from "react";
   
   interface Props {
     children: ReactNode;
@@ -16,6 +16,14 @@ import {ReactNode, createContext, useCallback, useContext} from "react";
   const ThemeContextProvider = ({ children }: Props) => {
 
     const { value: theme, setValue: setTheme } = useToggle({ initial: false });
+
+    function getThemeFromLocalStorage() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme === "dark"); 
+        document.body.classList.toggle("dark", savedTheme === "dark");
+      }
+    }
   
     const toggleTheme = useCallback(() => {
       const saveTheme = !theme;
@@ -29,6 +37,10 @@ import {ReactNode, createContext, useCallback, useContext} from "react";
       theme,
       toggleTheme,
     };
+
+    useEffect(() => {
+      getThemeFromLocalStorage();
+    }, [theme]);
 
     return (
       <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

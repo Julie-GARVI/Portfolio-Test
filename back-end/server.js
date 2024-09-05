@@ -10,6 +10,9 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+console.log('Email User:', process.env.EMAIL_USER);
+console.log('Email Pass:', process.env.EMAIL_PASS ? 'Loaded' : 'Not Loaded');
+
 app.use(cors({
     origin: '*',
     credentials: true,
@@ -70,5 +73,5 @@ app.post('/sendEmail', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Serveur en cours d'exécution sur http://localhost:${port}`);
+    console.log(`Serveur en cours d'exécution sur https://portfolio-julie-garvi.fr`);
 });

@@ -11,7 +11,7 @@ export const projectsWebJulieList: projectsList[] = [
         title: "Paca-destinations",
         icons: [FaReact, BiLogoTypescript, RiNextjsFill],
         description: "Paca-destinations présente des idées de destinations dans la région Provence-Alpes-Côte d'Azur. Les utilisateurs peuvent créer un compte et accéder à leur profil.",
-        baseUrl: "https://paca-destinations-g6aocnh3d-julie-garvis-projects.vercel.app/"
+        baseUrl: "https://paca-destinations.fr/"
     },
     {
         img: "evasion-trip.png",

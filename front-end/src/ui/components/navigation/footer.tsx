@@ -23,7 +23,8 @@ export const Footer = () => {
 
     return (
         <footer className="bg-gray-200 border border-t-2 border-t-gray-300 z-[100] dark:bg-gray-800 dark:border-gray-700">
-            <Container className=" flex flex-row justify-between gap-10 pt-16">
+            <Container className=" flex flex-row justify-center sm:justify-between gap-10 pt-16">
+                
                 <div className="space-y-2">
                     <Typography
                     variant="heading3"

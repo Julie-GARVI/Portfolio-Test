@@ -9,12 +9,12 @@ export const valuesJulieList: valuesList[] = [
     {
         title: "Authenticité",
         icon: FaHandHoldingHeart,
-        description: "Je privilégie la qualité dans mon travail et prends le temps d'échanger sur les attentes de votre projet pour répondre au mieux à vos attentes."
+        description: "Je privilégie la qualité dans mon travail et prends le temps d'échanger avec vous sur les objectifs de votre projet pour répondre au mieux à vos attentes."
     },
     {
         title: "Créativité",
         icon: FaRegLightbulb, 
-        description: "J'utilise des technologies modernes pour créer des interfaces qui reflètent l'image de votre marque. Toujours à la recherche de nouvelles idée, je saurais m'adapter à vos besoins."
+        description: "J'utilise des technologies modernes pour créer des interfaces qui reflètent l'image de votre entreprise. Toujours à la recherche de nouvelles idée, je saurais m'adapter à vos besoins."
     },
     {
         title: "Passion",
