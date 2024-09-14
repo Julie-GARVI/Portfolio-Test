@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
@@ -19,7 +19,9 @@ app.use(cors({
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 }));
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send("Hello from API");
