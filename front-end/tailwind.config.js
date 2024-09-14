@@ -57,7 +57,7 @@ module.exports = {
         'xl': ['18px', { lineHeight: '30px', letterSpacing: '-1px' }],
         'lg': ['16px', { lineHeight: '30px', letterSpacing: '-0.8px' }],
         'base': ['16px', { lineHeight: '25px', letterSpacing: '-0.7px' }],
-        'sm': ['13px', { lineHeight: '18px', letterSpacing: '-0.6px' }],
+        'sm': ['14px', { lineHeight: '19px', letterSpacing: '-0.4px' }],
       },
       borderRadius: {
         DEFAULT: '10px',
